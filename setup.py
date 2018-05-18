@@ -28,7 +28,7 @@ def main():
 
     if os.path.exists('.git'):
 
-        import pip._internal.vcs.git as git
+        import pip.vcs.git as git
         g = git.Git()  # NOTE: pip API's are internal, this has to be refactored
 
         g.run_command(["submodule", "sync"])
